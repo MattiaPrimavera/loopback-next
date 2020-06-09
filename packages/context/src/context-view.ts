@@ -296,6 +296,11 @@ export function createViewGetter<T = unknown>(
   return view.asGetter(session);
 }
 
+/**
+ * Type definitions for events emitted by ContextView instances.
+ *
+ * @internal Marked as internal to avoid api-extractor/api-documenter bug https://github.com/microsoft/rushstack/issues/1921
+ */
 export interface ContextView {
   /**
    * The "bind" event is emitted when a new binding is added to the view.

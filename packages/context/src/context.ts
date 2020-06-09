@@ -880,6 +880,11 @@ export class Context extends EventEmitter {
   }
 }
 
+/**
+ * Type definitions for events emitted by Context instances.
+ *
+ * @internal Marked as internal to avoid api-extractor/api-documenter bug https://github.com/microsoft/rushstack/issues/1921
+ */
 export interface Context {
   /**
    * The "bind" event is emitted when a new binding is added to the context.

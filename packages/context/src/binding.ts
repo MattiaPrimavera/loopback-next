@@ -874,7 +874,9 @@ export class Binding<T = BoundValue> extends EventEmitter {
 }
 
 /**
- * Type definitions for events emitted by Binding classes.
+ * Type definitions for events emitted by Binding instances.
+ *
+ * @internal Marked as internal to avoid api-extractor/api-documenter bug https://github.com/microsoft/rushstack/issues/1921
  */
 export interface Binding {
   /**
