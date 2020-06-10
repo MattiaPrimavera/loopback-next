@@ -30,8 +30,8 @@ or
 
 The **`strategyName`** is the **unique** name of the authentication strategy.
 
-When the **`options`** object is specified, it must be relevant to that particular
-strategy.
+When the **`options`** object is specified, it must be relevant to that
+particular strategy.
 
 Here is an example of the decorator using a custom authentication strategy named
 **'basic'** without options, for the endpoint `/whoami` in a controller named
@@ -52,8 +52,7 @@ export class WhoAmIController {
     // ------ ADD SNIPPET ---------
     @inject(SecurityBindings.USER)
     private userProfile: UserProfile,
-    // ------------- END OF SNIPPET -------------
-  )
+  ) // ------------- END OF SNIPPET -------------
   {}
 
   // ------ ADD SNIPPET ---------

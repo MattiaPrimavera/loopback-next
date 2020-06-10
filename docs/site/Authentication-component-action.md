@@ -152,7 +152,8 @@ means the user was authenticated successfully, and the user profile is added to
 the request context (via the `SecurityBindings.USER` binding); otherwise an
 error is thrown.
 
-Here is an example of a modified sequence which utilizes the `authenticate` action.
+Here is an example of a modified sequence which utilizes the `authenticate`
+action.
 
 ```ts
 export class MyAuthenticatingSequence implements SequenceHandler {
@@ -161,8 +162,8 @@ export class MyAuthenticatingSequence implements SequenceHandler {
     // ------ ADD SNIPPET ---------
     @inject(AuthenticationBindings.AUTH_ACTION)
     protected authenticateRequest: AuthenticateFn,
-    // ------------- END OF SNIPPET -------------
-  ) {}
+  ) // ------------- END OF SNIPPET -------------
+  {}
 
   async handle(context: RequestContext) {
     try {
