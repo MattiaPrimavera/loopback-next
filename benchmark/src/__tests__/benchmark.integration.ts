@@ -13,12 +13,12 @@ const debug = require('debug')('test');
 
 const DUMMY_STATS: EndpointStats = {
   latency: 1,
-  requestsPerSecond: 1000,
+  requestsPerSecond: 500,
 };
 
 describe('Benchmark (SLOW)', function (this: Mocha.Suite) {
   // Unfortunately, the todo app requires one second to start (or more on CI)
-  this.timeout(15000);
+  this.timeout(30000);
   it('works', async () => {
     const bench = new Benchmark();
     bench.cannonFactory = url => new AutocannonStub(url);
